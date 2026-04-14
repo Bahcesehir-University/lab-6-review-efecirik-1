@@ -39,7 +39,7 @@ public:
     // TODO 1a: Default constructor
     // Set name to "Unknown", id to 0, gpa to 0.0
     Student() {
-        name = "Unknown";
+        name = "unknown";
         id = 0;
         gpa =0.0;
         // YOUR CODE HERE
@@ -66,7 +66,7 @@ public:
     // TODO 1d: Destructor
     // Print: "Student [name] destroyed"
     ~Student() {
-        cout<<"Student"<<name<<"destroyed"<<endl;
+        cout<<"Student "<<name<<" destroyed"<<endl;
         // YOUR CODE HERE
     }
 
@@ -126,7 +126,7 @@ public:
             
         
         // YOUR CODE HERE
-        return name;
+        return temp;
     }
 
     // ----- Task 5: Operator Overloading -----
@@ -149,7 +149,7 @@ public:
     // Format: "Student(name, ID: id, GPA: gpa)"
     // Example: "Student(Ali, ID: 101, GPA: 3.5)"
     friend ostream& operator<<(ostream& os, const Student& s) {
-               os <<"Student("<< s.name << "ID"<<s.id<<" GPA: " << s.gpa << ")";
+               os <<"Student("<< s.name <<", ID"<<s.id<<", GPA: " << s.gpa << ")";
         // YOUR CODE HERE
         return os;
     }
